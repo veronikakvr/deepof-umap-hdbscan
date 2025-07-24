@@ -10,8 +10,14 @@ scipy = 1.13.1
 
 conda create -n analysis python=3.9.23
 
+To install neccessary dependencies on mac: pip install requirements.txt
+
 Operate within Jupyter Lab or VisualStudio
 
-Ensure the above mentioned packages are at these exact versions as downgrading/upgrading will affect the HDBSCAN clustering perormance.
+Ensure the above mentioned packages are at these exact versions as downgrading/upgrading will affect the HDBSCAN clustering performance.
+
+
+python umap_hdbscan_pipeline.py --female_csv path/to/females.csv --male_csv path/to/males.csv
+
 
 #created by Veronika Kovarova, 2025
