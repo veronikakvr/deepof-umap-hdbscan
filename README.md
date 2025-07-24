@@ -21,4 +21,3 @@ python umap_hdbscan_pipeline.py --female_csv path/to/females.csv --male_csv path
 
 
 #created by Veronika Kovarova, 2025
-
