@@ -57,7 +57,7 @@ statsmodels
   
 ---
 
-##Customization Tips
+## Customization Tips
 - **To analyse different features:**
     Update the 'behavior_cols' list at the top of the script
 - **To change cluster parameters:**
