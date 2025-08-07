@@ -12,36 +12,23 @@ The pipeline uses **UMAP** for dimensionality reduction, **HDBSCAN** for cluster
 
    - Start with raw DeepOF output files containing second-to-second behavioral annotations.
    - Organize these raw files in a folder.
-   - Run the **masterfile generator script** on this folder to generate properly formatted masterfiles.
+   - Run the **`masterfilecreator_deepof8.ipynb`** in this folder to generate properly formatted masterfiles.
    - The output will include a `_FINAL` file, which is correctly formatted and ready for the clustering pipeline.
 
 2. **Use the generated `_FINAL` masterfile as input for this clustering pipeline.**
 
-3. **Update paths in `behavioural_cluster_pipeline.py`** to point to your `_FINAL` masterfile.
+3. **Run the Installation (info below)**
 
-4. **Run the clustering pipeline either:**
-
-   - Directly via the command line:
-     ```
-     umap_hdbscan_pipeline.py
-     ```
-   - Or interactively via Jupyter Notebook or JupyterLab (recommended for exploratory work).
-
-5. **Ensure the correct environment setup:**
+4. **Ensure the correct environment setup:**
 
    - Verify the `requirements.txt` matches your Python environment versions.
    - The pipeline requires **Python 3.9.23** and specific package versions for reliable clustering performance.
 
-## Features
+5. **Update paths in `UMAP_HDBSCAN_Interactive.ipynb`** to point to your `_FINAL` masterfile and relevant filtering parameters.
 
-- **Data cleaning, aggregation, and imputation**
-- **Flexible time-binning for longer datasets**
-- **UMAP embedding and HDBSCAN clustering**
-- **Automatic cluster quality assessment**
-- **Non-parametric Kruskal-Wallis and post-hoc Dunn's tests**
-- **Clustered behavioural profile visualization**
-- **Commented modular code for easy adaptation**
-- **Violin and scatter plots with annotations**
+6. **Run the clustering pipeline:**
+
+   - via Jupyter Notebook - play around with the parameters
 
 ## Installation
 
@@ -77,6 +64,17 @@ conda activate analysis
 
 *Ensure these exact package versions to maintain HDBSCAN clustering performance.*
 
+## Features
+
+- **Data cleaning, aggregation, and imputation**
+- **Flexible time-binning for longer datasets**
+- **UMAP embedding and HDBSCAN clustering**
+- **Automatic cluster quality assessment**
+- **Non-parametric Kruskal-Wallis and post-hoc Dunn's tests**
+- **Clustered behavioural profile visualization**
+- **Commented modular code for easy adaptation**
+- **Violin and scatter plots with annotations**
+
 ## Usage Tips
 
 - To analyze different features, update the `behavior_cols` list at the top of `behavioural_cluster_pipeline.py`.
@@ -84,7 +82,7 @@ conda activate analysis
 
 ## Results
 
-- Cluster validation metrics are printed in the terminal or notebook output.
+- Cluster validation metrics are printed in the notebook output.
 - Visualizations include violin plots and scatter UMAP embeddings colored by clusters.
 
 ## Citing
