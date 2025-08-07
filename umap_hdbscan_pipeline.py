@@ -1,3 +1,4 @@
+### created by V. Kovarova August 2025
 import os
 
 # Set environment variables for single-threading BEFORE importing numpy/scipy or related libs
